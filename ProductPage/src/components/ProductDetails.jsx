@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductDetail } from "../utils/apis";
+// import '../styles.css'
 
 const ProductDetails = () => {
-  // const [state, setState] = useState()
   const [productDetails, setProductDetails] = useState({});
-  // syntax for object destructuring: const { property, names } = useParams()
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <h2>{productDetails.title}</h2>
+      <h1>{productDetails.title}</h1>
       <img src={productDetails.image} alt="" width={150} />
-      <p>{productDetails.description}</p>
+      <h4>{productDetails.description}</h4>
     </div>
   );
 };
