@@ -30,7 +30,9 @@ const ProductDetails = () => {
       <button className="back-btn" onClick={goBack}>
         Back
       </button>
-      <button>Add to Cart</button>
+      <button onClick={() => {
+                    navigate("/login")
+                  }}>Add to Cart</button>
     </div>
   );
 };
