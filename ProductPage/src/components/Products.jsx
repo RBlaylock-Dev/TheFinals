@@ -29,11 +29,10 @@ function GetProductsList() {
             <Card
               key={item.id}
               className="cards"
-              onClick={() => {
-                navigate("details/" + item.id);
-              }}
+              // onClick={() => {
+              //   navigate("details/" + item.id);
+              // }}
             >
-              <CardActionArea>
                 <CardMedia
                   className="product-img"
                   component="img"
@@ -41,21 +40,25 @@ function GetProductsList() {
                   alt="product-image"
                 />
                 <CardContent>
-                  <Typography className="prod-title">{item.title}</Typography>
+                  <Typography className="prod-title"><b><a href="" onClick={() => {
+                navigate("details/" + item.id);
+              }}>{item.title}</a></b></Typography>
                   <Typography className="prod-desc">
-                    <b>Product Description:</b> {item.description}
+                    Product Description: {item.description}
                   </Typography>
                 </CardContent>
                 <CardContent>
-                  <Typography>Price: ${item.price}</Typography>
-                </CardContent>
-                <CardContent>
-                  <Typography className="prod-rating">
+                  <Typography>Price: ${item.price}</Typography><Typography className="prod-rating">
                     Product Rating: {item.rating.rate}
                   </Typography>
                 </CardContent>
-              </CardActionArea>
-            </Card>
+                <CardContent>
+                  
+                  <button onClick={() => {
+                    navigate("/login")
+                  }}>Add to Cart</button>
+                </CardContent>
+              </Card>
           );
         })}
       </div>

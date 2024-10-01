@@ -5,10 +5,13 @@
 }
 
 .cards {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 350px;
   max-height: auto;
   margin: 1rem;
+  padding-top: 1.5rem
 }
 
 .product-img {
@@ -26,3 +29,6 @@
   font-size: 12px;
 }
 
+button {
+
+}

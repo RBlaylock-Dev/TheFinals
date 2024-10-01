@@ -2,6 +2,7 @@
 // import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css'; // Optional for styling
+imort searchbar
 
 const Header = () => {
   const navigate = useNavigate();
@@ -12,6 +13,9 @@ const Header = () => {
 
   return (
     <header className="header">
+
+
+
       <button className="back-btn" onClick={goBack}>
         ← Back
       </button>
